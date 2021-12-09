@@ -1,6 +1,6 @@
 FROM ubuntu
 MAINTAINER Baskar
 #RUN apt-get update
-#COPY target/demo-0.0.1-SNAPSHOT.jar /demo.jar
+COPY target/demo_testimage:0.0.1-SNAPSHOT.jar /test.jar
 # set the startup command to execute the jar
-CMD ["java", "-jar", "/demo.jar"]
+CMD ["java", "-jar", "/test.jar"]
