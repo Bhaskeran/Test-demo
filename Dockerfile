@@ -1,6 +1,6 @@
 FROM ubuntu
 MAINTAINER Baskar
 #RUN apt-get update
-# Take the war and copy to webapps of tomcat
-#COPY target/test.jar /usr/local/tomcat/webapps/
-CMD ["echo", "Helloworld..!"]
+COPY target/demo-0.0.1-SNAPSHOT.jar /demo.jar
+# set the startup command to execute the jar
+CMD ["java", "-jar", "/demo.jar"]
