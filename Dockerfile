@@ -1,5 +1,6 @@
-FROM openjdk:8-jdk-alpine
-EXPOSE 8080
-ARG JAR_FILE=target/my-application.jar
-ADD ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+FROM ubuntu
+MAINTAINER Baskar
+#RUN apt-get update
+COPY target/demo-0.0.1-SNAPSHOT.jar /demo.jar
+# set the startup command to execute the jar
+CMD ["java", "-jar", "/demo.jar"]
